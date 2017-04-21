@@ -1,0 +1,384 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/devongovett/font-manager"
+
+    >font-manager (v0.2.2)</a>
+</h1>
+<h4>Provides access to the system font catalog</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.font-manager">module font-manager</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.font-manager.findFont">
+            function <span class="apidocSignatureSpan">font-manager.</span>findFont
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.font-manager.findFontSync">
+            function <span class="apidocSignatureSpan">font-manager.</span>findFontSync
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.font-manager.findFonts">
+            function <span class="apidocSignatureSpan">font-manager.</span>findFonts
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.font-manager.findFontsSync">
+            function <span class="apidocSignatureSpan">font-manager.</span>findFontsSync
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.font-manager.getAvailableFonts">
+            function <span class="apidocSignatureSpan">font-manager.</span>getAvailableFonts
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.font-manager.getAvailableFontsSync">
+            function <span class="apidocSignatureSpan">font-manager.</span>getAvailableFontsSync
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.font-manager.substituteFont">
+            function <span class="apidocSignatureSpan">font-manager.</span>substituteFont
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.font-manager.substituteFontSync">
+            function <span class="apidocSignatureSpan">font-manager.</span>substituteFontSync
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.font-manager" id="apidoc.module.font-manager">module font-manager</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.font-manager.findFont" id="apidoc.element.font-manager.findFont">
+        function <span class="apidocSignatureSpan">font-manager.</span>findFont
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">findFont = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+[font descriptors](#font-descriptor) as well as possible. This method
+always returns a result (never `null`), so sometimes the output will not
+exactly match the input font descriptor if not all input parameters
+could be met.
+
+```javascript
+// asynchronous API
+fontManager.<span class="apidocCodeKeywordSpan">findFont</span>({ family: &#x27;Arial&#x27;, weight: 700 }, function(font) { ... });
+
+// synchronous API
+var font = fontManager.findFontSync({ family: &#x27;Arial&#x27;, weight: 700 });
+
+// output
+{ path: &#x27;/Library/Fonts/Arial Bold.ttf&#x27;,
+postscriptName: &#x27;Arial-BoldMT&#x27;,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.font-manager.findFontSync" id="apidoc.element.font-manager.findFontSync">
+        function <span class="apidocSignatureSpan">font-manager.</span>findFontSync
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">findFontSync = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+could be met.
+
+```javascript
+// asynchronous API
+fontManager.findFont({ family: &#x27;Arial&#x27;, weight: 700 }, function(font) { ... });
+
+// synchronous API
+var font = fontManager.<span class="apidocCodeKeywordSpan">findFontSync</span>({ family: &#x27;Arial&#x27;, weight: 700 });
+
+// output
+{ path: &#x27;/Library/Fonts/Arial Bold.ttf&#x27;,
+postscriptName: &#x27;Arial-BoldMT&#x27;,
+family: &#x27;Arial&#x27;,
+style: &#x27;Bold&#x27;,
+weight: 700,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.font-manager.findFonts" id="apidoc.element.font-manager.findFonts">
+        function <span class="apidocSignatureSpan">font-manager.</span>findFonts
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">findFonts = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Returns an array of [font descriptors](#font-descriptor) matching a query
+[font descriptor](#font-descriptor).
+The returned array may be empty if no fonts match the font descriptor.
+
+```javascript
+// asynchronous API
+fontManager.<span class="apidocCodeKeywordSpan">findFonts</span>({ family: &#x27;Arial&#x27; }, function(fonts) { ... });
+
+// synchronous API
+var fonts = fontManager.findFontsSync({ family: &#x27;Arial&#x27; });
+
+// output
+[ { path: &#x27;/Library/Fonts/Arial.ttf&#x27;,
+postscriptName: &#x27;ArialMT&#x27;,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.font-manager.findFontsSync" id="apidoc.element.font-manager.findFontsSync">
+        function <span class="apidocSignatureSpan">font-manager.</span>findFontsSync
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">findFontsSync = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+The returned array may be empty if no fonts match the font descriptor.
+
+```javascript
+// asynchronous API
+fontManager.findFonts({ family: &#x27;Arial&#x27; }, function(fonts) { ... });
+
+// synchronous API
+var fonts = fontManager.<span class="apidocCodeKeywordSpan">findFontsSync</span>({ family: &#x27;Arial&#x27; });
+
+// output
+[ { path: &#x27;/Library/Fonts/Arial.ttf&#x27;,
+postscriptName: &#x27;ArialMT&#x27;,
+family: &#x27;Arial&#x27;,
+style: &#x27;Regular&#x27;,
+weight: 400,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.font-manager.getAvailableFonts" id="apidoc.element.font-manager.getAvailableFonts">
+        function <span class="apidocSignatureSpan">font-manager.</span>getAvailableFonts
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getAvailableFonts = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### getAvailableFonts()
+
+Returns an array of all [font descriptors](#font-descriptor) available on the system.
+
+```javascript
+// asynchronous API
+fontManager.<span class="apidocCodeKeywordSpan">getAvailableFonts</span>(function(fonts) { ... });
+
+// synchronous API
+var fonts = fontManager.getAvailableFontsSync();
+
+// output
+[ { path: &#x27;/Library/Fonts/Arial.ttf&#x27;,
+postscriptName: &#x27;ArialMT&#x27;,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.font-manager.getAvailableFontsSync" id="apidoc.element.font-manager.getAvailableFontsSync">
+        function <span class="apidocSignatureSpan">font-manager.</span>getAvailableFontsSync
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getAvailableFontsSync = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Returns an array of all [font descriptors](#font-descriptor) available on the system.
+
+```javascript
+// asynchronous API
+fontManager.getAvailableFonts(function(fonts) { ... });
+
+// synchronous API
+var fonts = fontManager.<span class="apidocCodeKeywordSpan">getAvailableFontsSync</span>();
+
+// output
+[ { path: &#x27;/Library/Fonts/Arial.ttf&#x27;,
+postscriptName: &#x27;ArialMT&#x27;,
+family: &#x27;Arial&#x27;,
+style: &#x27;Regular&#x27;,
+weight: 400,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.font-manager.substituteFont" id="apidoc.element.font-manager.substituteFont">
+        function <span class="apidocSignatureSpan">font-manager.</span>substituteFont
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">substituteFont = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+is not found, a font containing the given characters is still returned.  If
+a font matching `postscriptName` *is* found, its characteristics (bold, italic, etc.)
+are used to find a suitable replacement.  If the font already contains the characters
+in `text`, it is not replaced and the font descriptor for the original font is returned.
+
+```javascript
+// asynchronous API
+fontManager.<span class="apidocCodeKeywordSpan">substituteFont</span>(&#x27;TimesNewRomanPSMT&#x27;, &#x27;汉字&#x27;, function(font
+) { ... });
+
+// synchronous API
+var font = fontManager.substituteFontSync(&#x27;TimesNewRomanPSMT&#x27;, &#x27;汉字&#x27;);
+
+// output
+{ path: &#x27;/Library/Fonts/Songti.ttc&#x27;,
+postscriptName: &#x27;STSongti-SC-Regular&#x27;,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.font-manager.substituteFontSync" id="apidoc.element.font-manager.substituteFontSync">
+        function <span class="apidocSignatureSpan">font-manager.</span>substituteFontSync
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">substituteFontSync = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+in `text`, it is not replaced and the font descriptor for the original font is returned.
+
+```javascript
+// asynchronous API
+fontManager.substituteFont(&#x27;TimesNewRomanPSMT&#x27;, &#x27;汉字&#x27;, function(font) { ... });
+
+// synchronous API
+var font = fontManager.<span class="apidocCodeKeywordSpan">substituteFontSync</span>(&#x27;TimesNewRomanPSMT&#x27;, &#x27;汉字&#x27
+;);
+
+// output
+{ path: &#x27;/Library/Fonts/Songti.ttc&#x27;,
+postscriptName: &#x27;STSongti-SC-Regular&#x27;,
+family: &#x27;Songti SC&#x27;,
+style: &#x27;Regular&#x27;,
+weight: 400,
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
